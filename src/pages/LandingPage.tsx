@@ -37,9 +37,9 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm">
+      <nav className="glass-container shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center space-x-2">
@@ -99,7 +99,7 @@ export default function LandingPage() {
       </section>
 
       {/* Features Grid */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
@@ -115,7 +115,7 @@ export default function LandingPage() {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow feature-importance"
+                className="enhanced-card p-6 feature-importance"
               >
                 <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center mb-4">
                   <feature.icon className="h-6 w-6 text-white" />
@@ -146,7 +146,7 @@ export default function LandingPage() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {['Python & ML', 'XGBoost', 'React.js', 'PostgreSQL', 'FastAPI', 'TensorFlow', 'AWS Cloud', 'Docker'].map((tech) => (
-              <div key={tech} className="text-center p-4 bg-gray-50 rounded-lg">
+              <div key={tech} className="text-center p-4 enhanced-card">
                 <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto mb-3 flex items-center justify-center">
                   <span className="text-white font-bold text-sm">{tech.charAt(0)}</span>
                 </div>

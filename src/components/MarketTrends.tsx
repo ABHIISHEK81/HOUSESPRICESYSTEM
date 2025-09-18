@@ -19,7 +19,7 @@ export default function MarketTrends() {
   ];
 
   return (
-    <div className="bg-white rounded-xl shadow-sm p-6">
+    <div className="enhanced-card rounded-xl p-6">
       <div className="flex items-center justify-between mb-6">
         <div className="flex items-center space-x-2">
           <TrendingUp className="h-6 w-6 text-blue-600" />

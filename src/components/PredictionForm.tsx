@@ -30,7 +30,7 @@ export default function PredictionForm({ onSubmit, isLoading }: PredictionFormPr
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-sm p-6">
+    <div className="enhanced-card rounded-xl p-6">
       <div className="flex items-center space-x-2 mb-6">
         <Home className="h-6 w-6 text-blue-600" />
         <h2 className="text-xl font-semibold text-gray-900">Property Details</h2>
@@ -44,7 +44,7 @@ export default function PredictionForm({ onSubmit, isLoading }: PredictionFormPr
           </label>
           <input
             type="text"
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-3 py-2 enhanced-input rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             placeholder="Enter property address"
             value={formData.address}
             onChange={(e) => handleChange('address', e.target.value)}
@@ -62,7 +62,7 @@ export default function PredictionForm({ onSubmit, isLoading }: PredictionFormPr
               type="number"
               min="500"
               max="10000"
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-3 py-2 enhanced-input rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               value={formData.area}
               onChange={(e) => handleChange('area', parseInt(e.target.value))}
             />
@@ -76,7 +76,7 @@ export default function PredictionForm({ onSubmit, isLoading }: PredictionFormPr
               type="number"
               min="0"
               max="100"
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-3 py-2 enhanced-input rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               value={formData.age}
               onChange={(e) => handleChange('age', parseInt(e.target.value))}
             />
@@ -90,7 +90,7 @@ export default function PredictionForm({ onSubmit, isLoading }: PredictionFormPr
               Bedrooms
             </label>
             <select
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-3 py-2 enhanced-input rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               value={formData.bedrooms}
               onChange={(e) => handleChange('bedrooms', parseInt(e.target.value))}
             >
@@ -108,7 +108,7 @@ export default function PredictionForm({ onSubmit, isLoading }: PredictionFormPr
               Bathrooms
             </label>
             <select
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-3 py-2 enhanced-input rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               value={formData.bathrooms}
               onChange={(e) => handleChange('bathrooms', parseInt(e.target.value))}
             >
@@ -128,7 +128,7 @@ export default function PredictionForm({ onSubmit, isLoading }: PredictionFormPr
               Property Type
             </label>
             <select
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-3 py-2 enhanced-input rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               value={formData.propertyType}
               onChange={(e) => handleChange('propertyType', e.target.value)}
             >
@@ -144,7 +144,7 @@ export default function PredictionForm({ onSubmit, isLoading }: PredictionFormPr
               Location Type
             </label>
             <select
-              className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+              className="w-full px-3 py-2 enhanced-input rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
               value={formData.location}
               onChange={(e) => handleChange('location', e.target.value)}
             >
@@ -160,7 +160,7 @@ export default function PredictionForm({ onSubmit, isLoading }: PredictionFormPr
             Property Condition
           </label>
           <select
-            className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+            className="w-full px-3 py-2 enhanced-input rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
             value={formData.condition}
             onChange={(e) => handleChange('condition', e.target.value)}
           >

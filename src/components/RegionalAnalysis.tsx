@@ -20,7 +20,7 @@ export default function RegionalAnalysis() {
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-sm p-6">
+    <div className="enhanced-card rounded-xl p-6">
       <div className="flex items-center space-x-2 mb-6">
         <MapPin className="h-6 w-6 text-green-600" />
         <h2 className="text-xl font-semibold text-gray-900">Regional Analysis</h2>

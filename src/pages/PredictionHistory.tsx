@@ -75,7 +75,7 @@ export default function PredictionHistory() {
   const avgAccuracy = soldPredictions.reduce((sum, p) => sum + p.accuracy!, 0) / soldPredictions.length;
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen">
       <Navbar />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
@@ -122,7 +122,7 @@ export default function PredictionHistory() {
         </div>
 
         {/* Predictions Table */}
-        <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+        <div className="enhanced-card rounded-xl overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-200">
             <h2 className="text-xl font-semibold text-gray-900">Recent Predictions</h2>
           </div>
