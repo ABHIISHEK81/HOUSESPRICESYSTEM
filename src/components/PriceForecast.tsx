@@ -22,10 +22,10 @@ export default function PriceForecast() {
   const growth = ((projectedPrice - currentPrice) / currentPrice) * 100;
 
   return (
-    <div className="enhanced-card rounded-xl p-6">
+    <div className="base44-card p-8">
       <div className="flex items-center space-x-2 mb-6">
         <Crystal className="h-6 w-6 text-purple-600" />
-        <h2 className="text-xl font-semibold text-gray-900">Price Forecast</h2>
+        <h2 className="text-2xl font-semibold text-gray-900">Price Forecast</h2>
       </div>
 
       <div className="mb-6">

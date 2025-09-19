@@ -9,6 +9,7 @@ import { Prediction } from '../types';
 export default function Dashboard() {
   const [currentPrediction, setCurrentPrediction] = useState<Prediction | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
 
   const handlePredictionSubmit = async (formData: any) => {
     setIsLoading(true);
@@ -46,48 +47,64 @@ export default function Dashboard() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen section-layer-1">
       <Navbar />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header Section */}
-        <div className="mb-12">
+        <div className="mb-12 pt-16">
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-6xl font-bold text-gray-900 mb-6">
               AI-Powered Price Prediction Dashboard
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Enter property details to get instant, accurate price predictions with detailed analysis and market insights
             </p>
           </div>
           
+          {/* Search Interface */}
+          <div className="search-container mb-12">
+            <div className="relative">
+              <input
+                type="text"
+                className="search-input"
+                placeholder="Enter property address or details..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+              />
+              <button className="search-button">
+                <Search className="h-5 w-5" />
+              </button>
+            </div>
+          </div>
+          
           {/* Quick Stats */}
           <div className="grid md:grid-cols-4 gap-6 mb-8">
-            <div className="enhanced-card p-6 text-center">
-              <div className="text-2xl font-bold text-blue-600 mb-1">95%+</div>
-              <div className="text-sm text-gray-600">Accuracy Rate</div>
+            <div className="stats-card hover-lift">
+              <div className="text-3xl font-bold text-blue-600 mb-2">95%+</div>
+              <div className="text-gray-600 font-medium">Accuracy Rate</div>
             </div>
-            <div className="enhanced-card p-6 text-center">
-              <div className="text-2xl font-bold text-green-600 mb-1">15min</div>
-              <div className="text-sm text-gray-600">Data Updates</div>
+            <div className="stats-card hover-lift">
+              <div className="text-3xl font-bold text-green-600 mb-2">15min</div>
+              <div className="text-gray-600 font-medium">Data Updates</div>
             </div>
-            <div className="enhanced-card p-6 text-center">
-              <div className="text-2xl font-bold text-purple-600 mb-1">50K+</div>
-              <div className="text-sm text-gray-600">Properties</div>
+            <div className="stats-card hover-lift">
+              <div className="text-3xl font-bold text-purple-600 mb-2">50K+</div>
+              <div className="text-gray-600 font-medium">Properties</div>
             </div>
-            <div className="enhanced-card p-6 text-center">
-              <div className="text-2xl font-bold text-orange-600 mb-1">24/7</div>
-              <div className="text-sm text-gray-600">Availability</div>
+            <div className="stats-card hover-lift">
+              <div className="text-3xl font-bold text-orange-600 mb-2">24/7</div>
+              <div className="text-gray-600 font-medium">Availability</div>
             </div>
           </div>
         </div>
 
         {/* Main Content */}
         <div className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-2">
+          <h2 className="text-3xl font-semibold text-gray-900 mb-3">
             House Price Prediction Dashboard
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-lg">
             Get instant predictions with confidence scores and feature importance analysis
           </p>
         </div>

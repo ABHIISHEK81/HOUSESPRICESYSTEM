@@ -75,17 +75,17 @@ export default function PredictionHistory() {
   const avgAccuracy = soldPredictions.reduce((sum, p) => sum + p.accuracy!, 0) / soldPredictions.length;
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen section-layer-2">
       <Navbar />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Header Section */}
-        <div className="mb-12">
+        <div className="mb-12 pt-16">
           <div className="text-center mb-8">
-            <h1 className="text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-6xl font-bold text-gray-900 mb-6">
               Prediction History & Analytics
             </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
               Track your prediction accuracy, analyze performance trends, and review historical property valuations
             </p>
           </div>
@@ -93,41 +93,41 @@ export default function PredictionHistory() {
 
         {/* Performance Overview */}
         <div className="mb-8">
-          <h2 className="text-2xl font-semibold text-gray-900 mb-2">
+          <h2 className="text-3xl font-semibold text-gray-900 mb-3">
             Prediction History
           </h2>
-          <p className="text-gray-600">
+          <p className="text-gray-600 text-lg">
             Monitor your prediction accuracy and model performance metrics
           </p>
         </div>
 
         {/* Stats Cards */}
         <div className="grid md:grid-cols-3 gap-6 mb-8">
-          <div className="bg-white p-6 rounded-xl shadow-sm">
+          <div className="stats-card hover-lift">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-500">Total Predictions</p>
-                <p className="text-3xl font-bold text-gray-900">{predictions.length}</p>
+                <p className="text-4xl font-bold text-gray-900">{predictions.length}</p>
               </div>
               <Clock className="h-8 w-8 text-blue-500" />
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-sm">
+          <div className="stats-card hover-lift">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-500">Average Accuracy</p>
-                <p className="text-3xl font-bold text-green-600">{avgAccuracy.toFixed(1)}%</p>
+                <p className="text-4xl font-bold text-green-600">{avgAccuracy.toFixed(1)}%</p>
               </div>
               <TrendingUp className="h-8 w-8 text-green-500" />
             </div>
           </div>
 
-          <div className="bg-white p-6 rounded-xl shadow-sm">
+          <div className="stats-card hover-lift">
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-sm font-medium text-gray-500">Properties Sold</p>
-                <p className="text-3xl font-bold text-purple-600">{soldPredictions.length}</p>
+                <p className="text-4xl font-bold text-purple-600">{soldPredictions.length}</p>
               </div>
               <MapPin className="h-8 w-8 text-purple-500" />
             </div>
@@ -135,9 +135,9 @@ export default function PredictionHistory() {
         </div>
 
         {/* Predictions Table */}
-        <div className="enhanced-card rounded-xl overflow-hidden">
+        <div className="base44-card overflow-hidden">
           <div className="px-6 py-4 border-b border-gray-200">
-            <h2 className="text-xl font-semibold text-gray-900">Recent Predictions</h2>
+            <h2 className="text-2xl font-semibold text-gray-900">Recent Predictions</h2>
           </div>
 
           <div className="overflow-x-auto">

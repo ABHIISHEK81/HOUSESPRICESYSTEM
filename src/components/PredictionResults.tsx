@@ -29,7 +29,7 @@ export default function PredictionResults({ prediction, isLoading }: PredictionR
 
   if (isLoading) {
     return (
-      <div className="enhanced-card rounded-xl p-6">
+      <div className="base44-card p-8">
         <div className="animate-pulse">
           <div className="h-6 bg-gray-200 rounded mb-4"></div>
           <div className="h-20 bg-gray-200 rounded mb-6"></div>
@@ -42,7 +42,7 @@ export default function PredictionResults({ prediction, isLoading }: PredictionR
 
   if (!prediction) {
     return (
-      <div className="enhanced-card rounded-xl p-6 text-center">
+      <div className="base44-card p-8 text-center">
         <DollarSign className="h-12 w-12 text-gray-300 mx-auto mb-4" />
         <h3 className="text-lg font-medium text-gray-600 mb-2">
           Ready for Prediction
@@ -57,7 +57,7 @@ export default function PredictionResults({ prediction, isLoading }: PredictionR
   const ConfidenceIcon = getConfidenceIcon(prediction.confidence);
 
   return (
-    <div className="enhanced-card rounded-xl overflow-hidden">
+    <div className="base44-card overflow-hidden">
       {/* Header */}
       <div className="prediction-card p-6">
         <div className="flex items-center justify-between text-white">

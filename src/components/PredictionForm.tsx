@@ -30,10 +30,10 @@ export default function PredictionForm({ onSubmit, isLoading }: PredictionFormPr
   };
 
   return (
-    <div className="enhanced-card rounded-xl p-6">
+    <div className="base44-card p-8">
       <div className="flex items-center space-x-2 mb-6">
         <Home className="h-6 w-6 text-blue-600" />
-        <h2 className="text-xl font-semibold text-gray-900">Property Details</h2>
+        <h2 className="text-2xl font-semibold text-gray-900">Property Details</h2>
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
